@@ -45,7 +45,7 @@ public class StringCollectionTest {
     @Test
     public void get() {
         assertEquals("4", arrTest.get(3));
-        assertEquals(null, arrTest.get(50));
+        assertNull(arrTest.get(50));
     }
 
     @Test
