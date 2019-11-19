@@ -1,23 +1,23 @@
 package HW13;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class StrUp {
-    private ArrayList<String> strBefore;
-    private ArrayList<String> strAfter;
+    private List<String> strBefore;
+    private List<String> strAfter;
 
-    public StrUp(ArrayList<String> strBefore) {
-        this.strBefore = strBefore;
-        strAfter = this.strBefore.stream().forEach(s -> s.toUpperCase());
+    public StrUp(List<String> str) {
+        this.strBefore = str;
+        this.strAfter = str.stream().map(e -> e.toUpperCase()).collect(Collectors.toList());
     }
 
-    public ArrayList<String> getStrBefore() {
+    public List<String> getStrBefore() {
         return strBefore;
     }
 
-    public ArrayList<String> getStrAfter() {
+    public List<String> getStrAfter() {
         return strAfter;
     }
 }

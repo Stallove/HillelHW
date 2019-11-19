@@ -9,6 +9,9 @@ import java.util.function.Predicate;
 public class Main {
     public static void main(String[] args) {
 
+//      Имеется коллекция из String, отфильтровать и вывести на экран все значения,
+//      которые написаны в loverCase and length = 4
+
         List<String> strings = new ArrayList<>();
 
         strings.add("aaaa");
@@ -28,6 +31,8 @@ public class Main {
         */
         System.out.println("=======");
 
+//      Имеется коллекция из Integes, использую стримы посчитать среденее значения всех чисел
+
         List<Integer> integers = new ArrayList<>();
 
         integers.add(12);
@@ -41,20 +46,25 @@ public class Main {
         */
         System.out.println("======");
 
-        List<User> userList = new ArrayList<>();
+//      Имеется коллекция из String, привести все стринги в UPPERCASE и вернуть коллекцию List<Pair>
 
-        userList.add(new User("Alex",   "Koporov",  22,     true));
-        userList.add(new User("Boris",  "Britva",   48,     true));
-        userList.add(new User("Artem",  "Koporovsky",12,    true));
-        userList.add(new User("Mark",   "Twen",     80 ,    true));
-        userList.add(new User("Mark",   "Cukenberg", 17,    true));
-        userList.add(new User("Viktor", "Coy",      30,     true));
-        userList.add(new User("Matilda","Luganskaya",12,    false));
+        StrUp stringsUp = new StrUp(strings);
 
-        Predicate<User> isLengthName4 = (u) -> u.getName().length() == 4;
-
-
-
+        System.out.println("Original collection");
+        stringsUp.getStrBefore().forEach(System.out::println);
         System.out.println();
+        System.out.println("Collection with UPPERCASE Strings");
+        stringsUp.getStrAfter().forEach(System.out::println);
+
+        /*
+            Collection with UPPERCASE Strings
+            AAAA
+            BBBB
+            BBBBB
+            SSSS
+            LLLLL
+            HHHH
+        */
+
     }
 }
