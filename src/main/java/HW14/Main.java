@@ -29,8 +29,13 @@ public class Main {
 //          Интерполяционный поиск
 
         System.out.println(Algorithm.interpolationSearch(arr, 3));
+        System.out.println(Algorithm.interpolationSearch(arr, 4));
+        System.out.println(Algorithm.interpolationSearch(arr, 5));
+
         /*
         * 2
+        * -1
+        * 3
         */
     }
 }
