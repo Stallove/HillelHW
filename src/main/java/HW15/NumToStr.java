@@ -108,4 +108,17 @@ public class NumToStr {
             System.out.println(e);
         }
     }
+
+    public static void strToConsole(String s) throws NumberFormatException {
+        int num;
+
+        try {
+            num = Integer.parseInt(s);
+        } catch (NumberFormatException e) {
+            System.out.println("NaN");
+            return;
+        }
+
+        NumToStr.strPrint(NumToStr.numToStr(num));
+    }
 }
