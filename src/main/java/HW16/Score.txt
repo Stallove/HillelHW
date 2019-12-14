@@ -8,3 +8,8 @@ Computer wins: 1
 Draws: 0
 Amount of rounds: 1
 ===========================
+Human wins: 0
+Computer wins: 0
+Draws: 0
+Amount of rounds: 0
+===========================

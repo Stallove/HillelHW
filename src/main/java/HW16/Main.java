@@ -116,6 +116,6 @@ public class Main {
                             "===========================" + '\n'
             );
             scoreWriting.close();
-        } 
+        }
     }
 }

@@ -29,7 +29,7 @@ public class Main {
         QuadraticEquation.root(1,5,3);
 
         System.out.println("-------------");
-        ArrayList<String> str = new ArrayList<>();
+        List<String> str = new ArrayList<>();
         str.add("1");
         str.add("2");
         str.add("3");
