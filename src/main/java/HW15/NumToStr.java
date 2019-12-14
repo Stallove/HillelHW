@@ -1,9 +1,18 @@
 package HW15;
 
-public class NumToStr {
+import java.util.Scanner;
 
-    public static String[] numToStr(int num) {
-        int oneNum;
+public class NumToStr {
+    public static void main(String[] args) {
+        String strNumber;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите число: ");
+        strNumber = scanner.nextLine();
+        NumToStr.strToConsole(strNumber);
+    }
+
+    private static String[] numToStr(int num) {
         String[] stringNum = {"", "", "", "", ""};
         String[] temp;
         while(num > 0) {
@@ -16,7 +25,7 @@ public class NumToStr {
         return stringNum;
     }
 
-    public static String[] stringNums(int num) {
+    private static String[] stringNums(int num) {
         if(num == 1) {
             String[] str = {
                     "  @@  ",
@@ -103,22 +112,28 @@ public class NumToStr {
         }
     }
 
-    public static void strPrint(String[] strArr) {
+    private static void strPrint(String[] strArr) {
         for (String e : strArr) {
             System.out.println(e);
         }
     }
 
-    public static void strToConsole(String s) throws NumberFormatException {
+    public static boolean strToConsole(String s) throws NumberFormatException {
         int num;
 
         try {
             num = Integer.parseInt(s);
         } catch (NumberFormatException e) {
             System.out.println("NaN");
-            return;
+            return false;
         }
 
         NumToStr.strPrint(NumToStr.numToStr(num));
+        return true;
+    }
+
+    public static boolean strToConsole(int i)  {
+        NumToStr.strPrint(NumToStr.numToStr(i));
+        return true;
     }
 }
