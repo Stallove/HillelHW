@@ -1,50 +1,40 @@
 package HW11;
 
-public class CustomIterator{
-    private String arr[];
-    private int index = 0;
+import java.util.List;
 
-    public CustomIterator(String[] arr) {
-        this.arr = arr;
+public class CustomIterator {
+    private final List array;
+    private int count = 0;
+
+    public CustomIterator(List array) {
+        this.array = array;
     }
 
-    public boolean hasNext() {
-        return index < arr.length;
+    public Object hasNext(){
+        if(array.get(count + 1) != null && count + 1 < array.size())
+            return array.get(count + 1);
+        return null;
     }
 
-    public String next() {
-        if (!hasNext())
-            return null;
-        index++;
-        return arr[index];
-    }
-
-    public boolean hasPrevious() {
-        return index > 0;
-    }
-
-    public String previous() {
-        if (!hasPrevious())
-            return null;
-        index--;
-        return arr[index];
-    }
-
-    public boolean delete() {
-        int i = index;
-        while (i + 1 < arr.length) {
-            arr[i] = arr[i + 1];
-            i++;
-        }
-        arr[i] = null;
+    public boolean remove() {
+        array.remove(count);
+        count--;
         return true;
     }
 
-    public void set(String str) {
-        arr[index] = str;
+    public Object previous() {
+        if(count != 0) {
+            count--;
+            return array.get(count);
+        }
+        return null;
     }
 
-    public String get() {
-        return arr[index];
+    public Object next(){
+        if(count < array.size()) {
+            count++;
+            return array.get(count+1);
+        }
+        return null;
     }
 }
