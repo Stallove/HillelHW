@@ -11,14 +11,11 @@ public class Main {
         System.out.println();
         dbDoer.getStudentsByGroup(3);
         System.out.println();
+        dbDoer.getStudentsByYear(2000);
+        System.out.println();
         dbDoer.getStudentLessonsMarksAndTeachers(2);
-
         System.out.println();
         dbDoer.getStudentsAverage(2);
-
-
-
-
         dbDoer.close();
     }
 }
