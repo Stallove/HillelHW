@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserGroup>
+    <User>
+        <Name>Ivan</Name>
+        <Group>Ivanov</Group>
+        <Phone>1234567890</Phone>
+        <Group>KVN</Group>
+    <User>
+    <User>
+
+        <Name>Stas</Name>
+        <Surname>Kondrashov</Surname>
+        <Group>Java Elementary</Group>
+        <Phone>0632281488</Phone>
+    </User>
+
+        <UserGroup>
